@@ -1,10 +1,7 @@
-// import necessary react testing library helpers here
 import { render, screen, fireEvent } from '@testing-library/react';
-// import the Counter component here
 import Counter from '../components/Counter';
 
 beforeEach(() => {
-  // Render the Counter component here
   render(<Counter />);
 });
 
@@ -19,7 +16,7 @@ test('should render initial count with value of 0', () => {
   expect(initialCount.textContent).toBe('0');
 });
 
-test('clicking + increments the count', () => {4
+test('clicking + increments the count', () => {
   const incrementCounter = screen.getByText('+');
   const getCount = screen.getByTestId("count");
   const countValue = parseInt(getCount.textContent, 10);
